@@ -1,0 +1,42 @@
+# Font settings for Arial or Helvetica
+font.family: Helvetica  # Or Helvetica if Arial is unavailable
+font.size: 10  # Font size 5-7 pt as required for figures
+
+
+
+# Color-safe and distinct color palette, avoiding red and green
+axes.prop_cycle: cycler(color=["#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7"])
+
+# Grid and tick settings
+axes.grid: False
+axes.facecolor: white
+axes.edgecolor: black
+axes.spines.right: False
+axes.spines.top: False
+
+axes.titlesize: medium
+axes.labelpad: 2
+
+xtick.direction: out
+ytick.direction: out
+
+# Figure dimensions for journal specifications (double column by default)
+figure.figsize: 7.09, 4.38  # Width for double-column figures, max height
+figure.autolayout: True
+
+# Line settings
+lines.antialiased: True
+
+# Background color for figures
+figure.facecolor: white
+figure.edgecolor: none  # Transparent edges for cleaner vector graphics
+
+# File export settings (vector-based preferred)
+savefig.format: pdf  # Default to PDF for vector graphics
+savefig.transparent: True
+savefig.bbox: tight
+savefig.dpi: 1000
+
+# Text settings
+text.usetex: False  # Set to True if using LaTeX-rendered text for symbols
+text.parse_math: True

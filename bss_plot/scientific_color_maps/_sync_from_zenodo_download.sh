@@ -1,0 +1,1 @@
+find "/Users/leonmartin_bih/Downloads/ScientificColourMaps8" -type f -name "*.txt" ! -name "*10*" ! -name "*25*" ! -name "*50*" ! -name "*HEX*" ! -name "*S*"  -exec cp {} "/Users/leonmartin_bih/tools/bss-plot/bss_plot/scientific_color_maps" \;
