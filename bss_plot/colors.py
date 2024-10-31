@@ -204,7 +204,7 @@ class Palette:
 
         return colormaps
 
-    def create_colormap(self):
+    def create_colormap(self, type="linear"):
         """
         Create a colormap from the palette colors.
 
@@ -214,12 +214,15 @@ class Palette:
 
         # Create a colormap that transitions between the colors in the palette
         colors = [color["hex"] for color in self.colors.values()]
-        cmap = mcolors.LinearSegmentedColormap.from_list("custom", colors)
+        if type == "linear":
+            cmap = mcolors.LinearSegmentedColormap.from_list("custom", colors)
+        if type == 'listed':
+            cmap = mcolors.ListedColormap(colors)
         cmap.name = self.name
         return cmap
 
-    def get_cmap(self):
-        return self.create_colormap()
+    def get_cmap(self, type='linear'):
+        return self.create_colormap(type=type)
 
 
 colorblind_palette = Palette(

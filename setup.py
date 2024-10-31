@@ -9,6 +9,9 @@ setup(
     include_package_data=True,
     install_requires=[
         "matplotlib",  # Ensure matplotlib is installed
+        "pybtex",
+        "pyaml",
+        'scikit'
     ],
     package_data={
         "bss_plot": ["styles/*.mplstyle"],  # Adjusted to the new package name
